@@ -1,5 +1,5 @@
 // Store location of data
-var portfolioData = 'img/portfolio.json';
+var portfolioData = 'https://raw.githubusercontent.com/GardenWren/FEWD-Project/master/img/portfolio.json';
 
 
 //load data
