@@ -1,0 +1,46 @@
+{
+	portfolio:[
+		{sectionName: "Paintings",
+		 sectionContent: [
+				{
+				projectName: "Zeriah", 
+				statement: "My sister is an amazing artist and I can not say enough good thing about her work.", 
+				imgList: [{imgText:"Father and child", imgSource: "baby.jpg"}]
+				}
+				{
+				projectName: "Growing together", 
+				statement: "My sister is an amazing artist and I can not say enough good thing about her work.", 
+				imgList: [{imgText:"portrait of an aging woman and a book page", imgSource: "ione.jpg"}]
+				}
+				{
+				projectName: "Invisible Things", 
+				statement: "My sister is an amazing artist and I can not say enough good thing about her work.", 
+				imgList: [{imgText:"mindmap of invisible things", imgSource: "invisible.jpg"}]
+				}
+			]
+		}
+		{sectionName: "Drawings",
+		 sectionContent: [
+				{
+				projectName: "Zeriah", 
+				statement: "My sister is an amazing artist and I can not say enough good thing about her work.", 
+				imgList: [{imgText:"Father and child", imgSource: "img/baby.jpg"}]
+				}
+				{
+				projectName: "Zeriah", 
+				statement: "My sister is an amazing artist and I can not say enough good thing about her work.", 
+				imgList: [{imgText:"Father and child", imgSource: "img/baby.jpg"}]
+				}
+				{
+				projectName: "Zeriah", 
+				statement: "My sister is an amazing artist and I can not say enough good thing about her work.", 
+				imgList: [{imgText:"Father and child", imgSource: "img/baby.jpg"}]
+				}
+			]
+		}
+	],
+	about: "I'm an undergraduate double majoring in fine arts and history at the University of Cincinnati. I'm an artist, a writer, and a history nerd. Someday I hope to grow up.",
+
+
+
+}
