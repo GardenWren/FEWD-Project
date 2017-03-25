@@ -3,17 +3,17 @@
 		 "sectionContent":[
 				{
 				"projectName": "Zeriah", 
-				"statement": "My sister is an amazing artist and I can not say enough good thing about her work.",
+				"statement": "My sister is an amazing artist and I can not say enough good things about her work.",
 				"imgList": [{"imgText":"Father and child", "imgSource": "baby.jpg"}]
 				},
 				{
 				"projectName": "Growing together",
-				"statement": "My sister is an amazing artist and I can not say enough good thing about her work.",
+				"statement": "My sister is an amazing artist and I can not say enough good things about her work.",
 				"imgList": [{"imgText":"portrait of an aging woman and a book page", "imgSource": "ione.jpg"}]
 				},
 				{
 				"projectName": "Invisible Things",
-				"statement": "My sister is an amazing artist and I can not say enough good thing about her work.",
+				"statement": "My sister is an amazing artist and I can not say enough good things about her work.",
 				"imgList": [{"imgText":"mindmap of invisible things", "imgSource": "invisible.jpg"}]
 				}
 			]
@@ -21,19 +21,19 @@
 		{"sectionName":"Drawings",
 		 "sectionContent":[
 				{
-				"projectName":"Zeriah",
-				"statement":"My sister is an amazing artist and I can not say enough good thing about her work.",
-				"imgList": [{"imgText":"Father and child","imgSource": "img/baby.jpg"}]
+				"projectName":"Methods of Healing",
+				"statement":"My sister is an amazing artist and I can not say enough good things about her work.",
+				"imgList": [{"imgText":"A graphic analysis of healing","imgSource": "healing.jpg"}]
 				},
 				{
-				"projectName": "Zeriah",
-				"statement": "My sister is an amazing artist and I can not say enough good thing about her work.",
-				"imgList": [{"imgText":"Father and child", "imgSource": "img/baby.jpg"}]
+				"projectName": "Stars",
+				"statement": "My sister is an amazing artist and I can not say enough good things about her work.",
+				"imgList": [{"imgText":"We are all made up of the dust of stars", "imgSource": "stars.jpg"}]
 				},
 				{
-				"projectName": "Zeriah",
+				"projectName": "Obfiscation",
 				"statement": "My sister is an amazing artist and I can not say enough good thing about her work.",
-				"imgList": [{"imgText":"Father and child", "imgSource": "img/baby.jpg"}]
+				"imgList": [{"imgText":"abstracted landscape in graphite", "imgSource": "blot.jpg"}]
 				}
 			]
 		}
