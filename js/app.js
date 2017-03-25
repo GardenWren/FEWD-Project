@@ -10,7 +10,9 @@ $.ajax(portfolioData).done(function(data) {
     //Find about section in index.html
     var aboutTextContainer = $('#abouttext');
     //Find navbarinsert in index.html
-    var navBar = $('#navbarinsert');
+    var navBarInsert = $('#navbarinsert');
+    //add sections from portfolio.json
+    navBarInsert.after(buildNav(data));
     //add about text to about section
     aboutTextContainer.append(data.aboutBlurb);
     //add portfolio data to portfolio html to portfolio section
@@ -18,7 +20,29 @@ $.ajax(portfolioData).done(function(data) {
 });
 
 
-//May provide this part.
+//Functions
+
+//function to create full nav html from portfolio.json
+function buildNav(data){
+  var navHTML = "";
+  data.portfolio.forEach(function(sectionData){
+    navHTML += buildNavSection(sectionData);
+  });
+ return navHTML;
+}
+
+
+//function to create nav html for sections from portfolio.json
+function buildNavSection(sectionData) {
+  var navSectionName = sectionData.sectionName;
+  var navSectionHTML ='<li><a href="#';
+  navSectionHTML += navSectionName;
+  navSectionHTML +='">' + navSectionName;
+  navSectionHTML += '</a></li>';
+  return navSectionHTML;
+}
+
+//function to add sections together into the full portfolio
 function buildPortfolio(data){
  var portfolioHTML = "";
   data.portfolio.forEach(function(sectionData){
@@ -28,22 +52,23 @@ function buildPortfolio(data){
   return portfolioHTML;
   }
 
-
+//function to create the uonorderd list that makes up each section of the portfollio
 function buildPortfolioSection(sectionData) {
   var sectionHTML= '<div id="' + sectionData.sectionName + '">';
-  sectionHTML=sectionHTML + '<div class="wrapper">';
-  sectionHTML=sectionHTML + '<ul>';
+  sectionHTML +='<div class="wrapper">';
+  sectionHTML += '<ul>';
   sectionData.sectionContent.forEach(function(projectData){
     
     sectionHTML += buildPortfolioProject(projectData);
     }
   );
-  sectionHTML=sectionHTML + '</ul>';
-  sectionHTML=sectionHTML + '</div>';
+  sectionHTML += '</ul>';
+  sectionHTML += '</div>';
   sectionHTML += '</div>';
   return sectionHTML
 }
 
+//function to create the html to display 1 project
 function buildPortfolioProject(projectData){
  var projectHTML = '<li>';
  projectHTML += '<h2>' + projectData.projectName + '</h2>';
@@ -51,10 +76,11 @@ function buildPortfolioProject(projectData){
  projectData.imgList.forEach(function(imgData){
   projectHTML += buildImg(imgData);
  });
- projectHTML = projectHTML + '</li>';
+ projectHTML += '</li>';
  return projectHTML;
 }
 
+//function to display an image in a project
 function buildImg(imgData){
  var imgHTML = '<a href="img/' + imgData.imgSource + '">';
  imgHTML += '<img src="img/' + imgData.imgSource + '" ';
