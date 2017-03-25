@@ -10,37 +10,54 @@ $.ajax(portfolioData).done(function(data) {
     //Find about section in index.html
     var aboutTextContainer = $('#abouttext');
     //Find navbarinsert in index.html
-    var navBar = $('#navbarinsert')
+    var navBar = $('#navbarinsert');
     //add about text to about section
     aboutTextContainer.append(data.aboutBlurb);
     //add portfolio data to portfolio html to portfolio section
-    portfolioContainer.append(buildPortfolio(data)) 
+    portfolioContainer.append(buildPortfolio(data)); 
 });
 
 
 //May provide this part.
-function buildPortfolo
+function buildPortfolio(data){
+ var portfolioHTML = "";
+  data.portfolio.forEach(function(sectionData){
+    portfolioHTML += buildPortfolioSection(sectionData);
+  });
+  console.log(portfolioHTML);
+  return portfolioHTML;
+  }
 
 
 function buildPortfolioSection(sectionData) {
- return sectionHTML
+  var sectionHTML= '<div id="' + sectionData.sectionName + '">';
+  sectionHTML=sectionHTML + '<div class="wrapper">';
+  sectionHTML=sectionHTML + '<ul>';
+  sectionData.sectionContent.forEach(function(projectData){
+    
+    sectionHTML += buildPortfolioProject(projectData);
+    }
+  );
+  sectionHTML=sectionHTML + '</ul>';
+  sectionHTML=sectionHTML + '</div>';
+  sectionHTML += '</div>';
+  return sectionHTML
 }
 
-<section id="painting">
-    <div class="wrapper">
-      <ul>
-        <li>
-          <a href="img/babe.jpg"><img src="img/babe.jpg" alt="painting of father and new born son" class="painting img"></a>
-          <p class="caption">My sister Emma is a wonderful artist and I can not say enough about her work</p>
-        </li>
-        <li>
-          <a href="img/ione.jpg"><img src="img/ione.jpg" alt="painting and book page of aging woman" class="painting img"></a>
-          <p class="caption">My sister Emma is a wonderful artist and I can not say enough about her work</p>
-        </li>
-        <li>
-          <a href="img/invisible.jpg"><img src="img/invisible.jpg" alt="mind map with paintings" class="painting img"></a>
-          <p class="caption">My sister Emma is a wonderful artist and I can not say enough about her work</p>
-        </li>
-      </ul>
-    </div>
-  </section>\\
+function buildPortfolioProject(projectData){
+ var projectHTML = '<li>';
+ projectHTML += '<h2>' + projectData.projectName + '</h2>';
+ projectHTML += '<p class="caption">' + projectData.statement + '</p>';
+ projectData.imgList.forEach(function(imgData){
+  projectHTML += buildImg(imgData);
+ });
+ projectHTML = projectHTML + '</li>';
+ return projectHTML;
+}
+
+function buildImg(imgData){
+ var imgHTML = '<a href="img/' + imgData.imgSource + '">';
+ imgHTML += '<img src="img/' + imgData.imgSource + '" ';
+ imgHTML += 'alt="' + imgData.imgText +'" class=" imgPortfolio"></a>';
+ return imgHTML
+}
