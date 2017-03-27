@@ -2,6 +2,8 @@
 /* ==========================================================================
    Emmas Portfolio
    ========================================================================== */
+/* font-family: 'Nothing You Could Do', cursive;
+font-family: 'Gloria Hallelujah', cursive; */
 
  /* ==========================================================================
     BASIC STYLES
@@ -52,15 +54,16 @@ h2 {
 }
 
 h3{
-  font-size:125%;
+  font-size:175%;
   line-height: 1;
+  text-transform: uppercase;
   font-family: 'Nothing You Could Do', cursive;
   font-weight: 700;
   margin: 0 0 1em 0;
 }
 
 p {
-  font-size:100%;
+  font-size:120%;
   line-height: 1.6;
   font-family: 'Gloria Hallelujah', cursive;
   margin-bottom: 2em;
@@ -126,7 +129,8 @@ img {
 
 
 header {
-  background-color: #111111;
+  background-color: darkgrey;
+  background-image:;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -145,8 +149,8 @@ nav::after {
 }
 
 .nav-logo {
-  width: 40%;
-  max-width: 200px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -182,12 +186,8 @@ nav a:hover {
 
 
 /* ==========================================================================
-   LAYOUT
+   GRID SYSTEM
    ========================================================================== */
-#home {
-	background-image: url("img/banner.jpg");
-}
-
 
 .section {
 	clear: both;
@@ -219,7 +219,7 @@ nav a:hover {
   Buttons
   ========================================================================== */
 
-a.ContactButton:link {
+a.hero-button:link {
   font-size: 140%;
   font-family: 'Roboto Slab', serif;
   text-transform: uppercase;
@@ -228,7 +228,7 @@ a.ContactButton:link {
   padding: 6px 12px;
 }
 
-a.ContactButton:hover {
+a.hero-button:hover {
   border-color: #871719;
   background-color: #871719;
 }
@@ -237,57 +237,36 @@ a.ContactButton:hover {
    Media Queries
    ========================================================================== */
 @media(min-width: 700px){
-
-  nav {
-    margin-top: 2em;
-  }
-
-  nav li {
-      width: 24.95%;
-      max-width: 125px;
-      border-bottom: none;
-      display: inline-block;
-  }
-
-   nav-logo{
-  	
-  }
-  .aboutimg{
-  	  display: float;
-   	  float:left;
-      width: 50%;
-  }
-  .abouttext{
-
-  }
+nav {
+	background-color: lightgreen;
+}
 }
 
 
 @media(min-width: 994px) {
- 
+  .span_1_of_2 {
+      width: 49.2%;
+  }
 
   nav {
     margin-top: 4em;
-  }
-  nav-logo{
+    background-color: red;
   }
 
   nav li {
       width: 24.95%;
-      max-width: 150px;
+      max-width: 110px;
       border-bottom: none;
       display: inline-block;
   }
-   .aboutimg {
-   	  display: float;
-   	  float:left;
-      width: 30%;
-  }
-    .abouttext{
 
+  .nwsltr-input {
+    width: 70%;
+    float: left;
   }
-#portfolio {
 
-};
+  .nwsltr-btn {
+    width: 20%;
+  }
 
 }

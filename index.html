@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 
   <!-- Import Fonts -->
-  <link rel="stylesheet" href="css/fonts.css" />
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Nothing+You+Could+Do" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -29,9 +29,11 @@
 	<header id="masthead" class="site-header" role="banner">
 
 	    <div class="wrap">
+<!--Navigation-->
 	        <nav class="main-nav" id="main-nav" role="navigation">
+	        	<a href="#home"><img src="img/logo.webp" alt="" class="nav-logo">
 	            <ul>
-	              <li><a href="#home">Welcome</a></li>
+	              <li class="welcome-nav"><a href="#home">Emma Paquin</a></li>
 	              <li id="navbarinsert"><a href="#about">Meet the Artist</a></li>
 	              <li><a href="#resume">Resume</a></li>
 	            </ul>
@@ -39,21 +41,20 @@
 	  </div>
 
 	</header>
+
+<!--Welcome section-->
 	<section id="home">
 		<div class="wrapper">
-			<h1>Emma Paquin</h1>
-			<a href="#"><img src="img/Banner.jpg" alt="Welcome to the Portfolio of Emma Paquin" class="banner"></a
-
+			<h1 class="title">Emma Paquin</h1>
 		</div>
 	</section>
 
+<!--Meet the Artist section-->
 	<section id="about">
 		<div class="wrapper">
 
 			 <div class="aboutimg">
-
-	        	<a href="#"><img src="img/logo.webp" alt="The Portfolio of Emma Paquin" class="Self"></a>
-
+				<a href="#"><img src="img/logo.webp" alt="The Portfolio of Emma Paquin" class="self img"></a>
 	     	 </div>
 			 <div class="abouttext">
 
@@ -68,18 +69,19 @@
 		</div>
 	</section>
 
+<!--Portfolio section-->
 	<section id="portfolio">
 		<!--JavaScript adds portfolio information from portfolio.json Here-->
 	</section>
 
+<!--Resume section-->
 	<section id="resume">
 		<div class="wrapper">
-			<a href="img/resume.webp"><img src="img/resume.webp" alt="Emma Paquin Resume" class="resume"></a>
-			<a href="#" class="ContactButton">Email Me!</a>
+			<h2>Resume</h2>
+			<a href="img/resume.webp"><img src="img/resume.webp" alt="Emma Paquin Resume" class="resume img"></a>
+			<a href="emma.paquin@rocketmail.com" class="ContactButton">Email Me!</a>
 		</div>
 	</section>
-
-
 
 	<footer>
 	</footer>

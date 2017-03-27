@@ -85,6 +85,6 @@ function buildPortfolioProject(projectData){
 function buildImg(imgData){
  var imgHTML = '<a href="img/' + imgData.imgSource + '">';
  imgHTML += '<img src="img/' + imgData.imgSource + '" ';
- imgHTML += 'alt="' + imgData.imgText +'" class=" imgPortfolio img"></a>';
+ imgHTML += 'alt="' + imgData.imgText +'" class=" imgPortfolio"></a>';
  return imgHTML
 }
