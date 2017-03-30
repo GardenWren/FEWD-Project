@@ -56,7 +56,7 @@ function buildPortfolio(data){
 function buildPortfolioSection(sectionData) {
   var sectionHTML= '<div id="' + sectionData.sectionName + '">';
   sectionHTML +='<div class="wrapper">';
-  sectionHTML += '<h2>' +sectionData.sectionName + '</h2>';
+  sectionHTML += '<h2 class="sectionTitle floatfix">' +sectionData.sectionName + '</h2>';
   sectionHTML += '<ul>';
   sectionData.sectionContent.forEach(function(projectData){
     
@@ -72,7 +72,7 @@ function buildPortfolioSection(sectionData) {
 //function to create the html to display 1 project
 function buildPortfolioProject(projectData){
  var projectHTML = '<li>';
- projectHTML += '<h3>' + projectData.projectName + '</h3>';
+ projectHTML += '<h3 class="projecttitle">' + projectData.projectName + '</h3>';
  projectHTML += '<p class="caption">' + projectData.statement + '</p>';
  projectData.imgList.forEach(function(imgData){
   projectHTML += buildImg(imgData);
@@ -83,7 +83,7 @@ function buildPortfolioProject(projectData){
 
 //function to display an image in a project
 function buildImg(imgData){
- var imgHTML = '<a href="img/' + imgData.imgSource + '">';
+ var imgHTML = '<a href="img/' + imgData.imgSource + '" class="portfolioimg">';
  imgHTML += '<img src="img/' + imgData.imgSource + '" ';
  imgHTML += 'alt="' + imgData.imgText +'" class=" imgPortfolio img"></a>';
  return imgHTML

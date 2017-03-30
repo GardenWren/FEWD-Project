@@ -76,6 +76,10 @@ a {
     text-decoration: none;
 }
 
+li {
+  text-decoration: none;
+}
+
 button {
     overflow: visible;
     border: 0;
@@ -120,6 +124,11 @@ img {
   text-align: center;
 }
 
+.floatfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /* ==========================================================================
    HEADER & HERO
    ========================================================================== */
@@ -129,6 +138,7 @@ header {
   background-color: #111111;
   background-repeat: no-repeat;
   background-position: center;
+  background-image: img/background.jpg;
   background-size: cover;
   margin: 0;
   color: #FFFFFF;
@@ -146,7 +156,7 @@ nav::after {
 
 .nav-logo {
   width: 40%;
-  max-width: 200px;
+  max-width: 666px;
   margin: 0 auto;
 }
 
@@ -177,7 +187,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #871719;
+  background-color: purple;
 }
 
 
@@ -193,19 +203,22 @@ nav a:hover {
 /* ==========================================================================
   Buttons
   ========================================================================== */
-
+.ContactButton {
+  margin: 0,auto;
+}
 a.ContactButton:link {
   font-size: 140%;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Gloria Hallelujah', cursive;
   text-transform: uppercase;
   font-weight: 700;
-  border: 2px solid #FFFFFF;
-  padding: 6px 12px;
+  border: 2px solid #000;
+  padding: 12px;
+  margin: 1em;
 }
 
 a.ContactButton:hover {
-  border-color: #871719;
-  background-color: #871719;
+  border-color: #000;
+  background-color: purple;
 }
 
 /* ==========================================================================
@@ -219,24 +232,26 @@ a.ContactButton:hover {
 
   nav li {
       width: 24.95%;
-      max-width: 125px;
+      max-width: 150px;
       border-bottom: none;
       display: inline-block;
   }
 
    nav-logo{
+    display:inline-block;
+    width: 20%;
   	
   }
   .aboutimg{
   	  display: float;
    	  float:left;
-      width: 50%;
+      width: 60%;
   }
   .abouttext{
-
+      display: float;
+      float:left;
+      width: 40%;
   }
-}
-
 
 @media(min-width: 994px) {
  
@@ -245,24 +260,26 @@ a.ContactButton:hover {
     margin-top: 4em;
   }
   nav-logo{
+    display:inline-block;
+    width: 20%;
+    
   }
 
   nav li {
-      width: 24.95%;
-      max-width: 150px;
+      max-width: 200px;
       border-bottom: none;
       display: inline-block;
   }
    .aboutimg {
    	  display: float;
    	  float:left;
-      width: 30%;
+      width: 75%;
+      max-width: 1876px;
   }
     .abouttext{
+      display: float;
+      float:left;
+      width: 25%;
 
   }
-#portfolio {
-
-};
-
 }
