@@ -205,8 +205,7 @@ nav a:hover {
   Buttons
   ========================================================================== */
 .ContactButton {
-  margin: 0, auto;
-  min-width: 150px;
+    min-width: 150px;
 }
 a.ContactButton:link {
   font-size: 140%;
